@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video App</title><script src="https://kit.fontawesome.com/eb8b420f0a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="home/style.css">
+</head>
+<body>
+    <div class="inner-container">
+        <div class="left-inner-container">
+            <h1>CHAT APPLICATION V2</h1>
+            <div class="button-container" onclick="render_join_form()">
+                <button class="button">JOIN ROOM</button>
+            </div>
+            <div class="button-container" onclick="render_create_form()">
+                <button class="button">CREATE ROOM</button>
+            </div>
+        </div>
+        <div class="right-inner-container">   
+            <!-- JOIN ROOM FORM -->
+            <div class="JoinInnerContainer">
+                <h1 class="heading">Join Room</h1>
+                <form class="FormConatiner" action="http://localhost:3000/join" method="post">
+                    <div class="InputContainer">
+                        <input type='text' id="FormName" name='username' placeholder='Name' minlength="3" maxlength="10" required class="inputField"></input>
+                        <label for="FormName" class="inputLabel">Name</label>
+                    </div>
+                    <div class="InputContainer">
+                        <input type='text' id = "FormRoom" name='roomid' placeholder='Room' required  class="inputField"></input>
+                        <label for="FormRoom" class="inputLabel">Room</label>
+                    </div>
+                    <div class="ButtonContainer">
+                        <div class="ButtonInnerConatiner">
+                            <button class="submit-button" type="submit">Join Room</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- CREATE ROOM FORM  -->
+            <div class="CreateInnerContainer">
+                <h1 class="heading">Create Room</h1>
+                <form class="FormConatiner" action="http://localhost:3000/create" method="post">
+                    <div class="InputContainer">
+                        <input type='text' id="FormName" name='username' placeholder='Name' required class="inputField"></input>
+                        <label for="FormName" class="inputLabel">Name</label>
+                    </div>
+                    <div class="ButtonContainer">
+                        <div class="ButtonInnerConatiner">
+                            <button class="submit-button" type="submit">Create Room</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="home/script.js"></script>
+</body>
+</html>

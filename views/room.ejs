@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video App</title>
+    <link rel="stylesheet" href="/room/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="https://kit.fontawesome.com/eb8b420f0a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+        const uname = "<%= uname %>";
+    </script>
+</head>
+<body>
+    <div class="inner-container">
+        <div class="left-inner-container">
+            <div class="video-main">
+                <div id="video-grid">
+                </div>
+            </div>
+            <div class="controls-container">
+                <div class="controls-block">
+                    <div id="mute_button" class="controls-button" onclick="muteEventHandler()">
+                        <i class="fas fa-microphone"></i>
+                        <span>Mute</span>
+                    </div>
+                    <div id="video_button" class="controls-button" onclick="videoEventHandler()">
+                        <i class="fas fa-video"></i>
+                        <span>Video</span>
+                    </div>
+                </div>
+                <div class="controls-block">
+                    <div class="controls-button">
+                       <i class="fas fa-user-friends"></i>
+                       <span>Participants</span>
+                    </div>
+                    <div class="controls-button">
+                       <i class="fas fa-comment-alt"></i>
+                       <span>Chat</span>
+                    </div>
+                 </div>
+                 <div class="controls-block">
+                    <div class="controls-button" onclick="userDisconnect()">
+                       <span class="red-txt">Leave Meeting</span>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="right-inner-container">
+            <div class="chat-header">
+                <h5>CHAT</h5>
+            </div>
+            <div id="chat_container" class="chat-container">
+                <div id="chat_messages"class="chat-messages">
+                    
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat_input" placeholder="Type a message...">
+                <i class="fas fa-paper-plane"></i>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/room/script.js"></script>
+</body>
+</html>
