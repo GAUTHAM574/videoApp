@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
+html, head, body {
+    margin: 0;
+    padding: 0;
+    background-color: #0e0e0e;
+} 
+
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #696969;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+* {
+    font-family: "Varela Round", sans-serif;
+    font-weight: auto;
+    font-style: normal;
+    color:whitesmoke;
+}
+
+span {
+    margin-top: 0.2rem;
+}
+
+.inner-container {
+    height:100vh;
+    display: flex;
+}
+
+.left-inner-container {
+    flex:0.78;
+    display: flex;
+    flex-direction: column;
+    /* border-right: 2px #45a049 solid; */
+}
+
+.video-main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls-container {
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    font-size:15px;
+}
+
+.controls-block {
+    display: flex;
+    justify-content: left;
+}
+
+.controls-block :hover {
+    background-color: #222222;
+}
+
+.controls-button {
+    min-width: 3rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right-inner-container {
+    flex:0.22;
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;
+    border-left: 2px #353535 solid;
+}
+
+.chat-header {
+    text-align: center;
+}
+
+.chat-container {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.chat-input {
+    padding: 1rem 0.5rem;
+    display: flex;
+    border-top: 2px #353535 solid;
+}
+
+.chat-input input {
+    border: none;
+    flex-grow: 1;
+    background-color: transparent;
+    font-size: medium;
+    color: white;
+}
+
+.chat-input input:focus {
+    outline: none;
+}
+
+#video-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+video {
+    height: 300px;
+    width: 400px;
+    box-shadow: 0.5rem 0.5rem 1rem #226d26;
+    border: 1px #45a049 solid;
+    border-radius: 0.5rem;
+}
+
+.red-txt {
+    color: #c93e3e;
+    font-weight: 700;
+}
